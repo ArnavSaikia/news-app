@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #202123;
+}
+
+.logo{
+    height: 65%;
+    width: auto;
+    object-fit: contain;
+}
