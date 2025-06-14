@@ -1,4 +1,4 @@
-import guardianLogo from '../assets/guardianlogo.png';
+import guardianLogo from '../assets/guardianlogo_white.png';
 import '../App.css';
 
 function Navbar(){

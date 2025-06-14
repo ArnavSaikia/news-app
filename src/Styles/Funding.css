@@ -1,0 +1,33 @@
+.funding-box{
+    position: relative;
+    padding: 0px 5%;
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+}
+
+.funding-box::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, #c1b2ff, #e3b3ff, #b3d8ff);
+    filter: blur(40px);
+    z-index: -1;
+}
+
+.funding-box span{
+    font-weight: 500;
+}
+
+.funding-box button{
+    border: none;
+    padding: 0.8em 1.7em;
+    background-color: #202123;
+    color: white;
+    border-radius: 0.7em;
+    font-size: 0.8em;
+}
