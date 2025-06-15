@@ -7,6 +7,7 @@ function Headlines(){
             <span>Headlines</span>
             <Article/>
             <Article/>
+            <hr/>
         </div>
     )
 }
