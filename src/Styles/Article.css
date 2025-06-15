@@ -1,0 +1,25 @@
+.article-box{
+    width: 90vw;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.article-box img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 4%;
+}
+
+.article-cateogry{
+    display: block;
+    color: #DA381F;
+    font-size: 0.85rem;
+    margin-bottom: 0.5em;
+}
+
+.article-description{
+    font-size: 1.0rem;
+    color: #202123;
+}

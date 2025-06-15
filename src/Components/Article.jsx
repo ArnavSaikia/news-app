@@ -1,11 +1,16 @@
-function Article(){
+import placeholderImage from '../assets/news_placeholder.png';
+import '../Styles/Article.css';
+
+function Article(props){
+    const imgSource = props.src || placeholderImage;
+
     return(
-        <div>
-            <img src=""></img>
-            <span className="news-cateogry">
+        <div className='article-box'>
+            <img src={imgSource}></img>
+            <span className="article-cateogry">
                 World / Middle East
             </span>
-            <span>
+            <span class="article-description">
                 Israel launches first ground offensive since end of Gaza ceasefire, partially recapturing key area
             </span>
         </div>
