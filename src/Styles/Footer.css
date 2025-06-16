@@ -1,0 +1,39 @@
+footer{
+    background-color: #202123;
+    color: #BCBCBC;
+    padding-left: 1.5rem;
+    max-width: 100vw;
+}
+
+footer img{
+    height: 4.55vh;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+footer span{
+    display: block;
+    margin-bottom: 1rem;
+}
+
+footer button:first-of-type {
+    color: #AFAFAE;
+    background-color: #444545;
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+footer button:nth-of-type(2) {
+    background-color: #2663FF;
+    color: #f8f8f8;
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.5em 3.3em;
+    font-weight: bold;
+    font-size: 1.1rem;
+}

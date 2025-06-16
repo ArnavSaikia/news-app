@@ -7,6 +7,7 @@ import Funding from './Components/Funding.jsx';
 import Navbar2 from './Components/Navbar2.jsx';
 import Headlines from './Components/Headlines.jsx';
 import Category from './Components/Category.jsx';
+import Footer from './Components/Footer.jsx';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Category name="Science"/>
       <Category name="Travel"/>
       <Category name="Food"/>
+      <Footer/>
     </>
   )
 }
