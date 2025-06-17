@@ -64,6 +64,9 @@ function Footer(){
                 <FooterLinkBox name="Company" links={company} />
                 <FooterLinkBox name="Legal" links={legal} />
             </div>
+            <div className='copyright-section'>
+                ©2025 Guardian News & Media Limited or its affiliated companies. All rights reserved. (dcr)
+            </div>
         </footer>
     )
 }

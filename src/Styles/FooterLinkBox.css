@@ -1,13 +1,29 @@
+.footer-link-box{
+    padding: 0.5rem;
+    border-top: #D8D8D8 solid 1px;
+    /* border-bottom: #D8D8D8 solid 1px; */
+}
+
 .footer-link-box span{
     color: white;
     margin-bottom: 0.5em;
+    display: flex;
+    align-items: center;
+}
+
+.footer-link-box span img{
+    height: 1em;
+    width: 1em;
+    margin: 0;
+    align-self: center;
+    transition: transform 0.1s ease-in-out;
 }
 
 
 .footer-link-box ul{
     display: none;
     list-style: none;
-    transition: display 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     color: #BCBCBC;
     margin-bottom: 1em;
 }
