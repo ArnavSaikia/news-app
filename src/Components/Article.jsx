@@ -10,7 +10,7 @@ function Article(props){
             <span className="article-cateogry">
                 World / Middle East
             </span>
-            <span class="article-description">
+            <span className="article-description">
                 Israel launches first ground offensive since end of Gaza ceasefire, partially recapturing key area
             </span>
         </div>

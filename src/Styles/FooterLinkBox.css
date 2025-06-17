@@ -1,0 +1,8 @@
+.footer-link-box ul{
+    display: none;
+    transition: display 0.5s ease-in-out;
+}
+
+.active{
+    display: block;
+}

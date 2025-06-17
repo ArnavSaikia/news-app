@@ -1,5 +1,5 @@
 import guardianLogo from '../assets/guardianlogo_white.png';
-import footerLinkBox from './FooterLinkBox';
+import FooterLinkBox from './FooterLinkBox';
 import '../Styles/Footer.css';
 
 function Footer(){
@@ -57,12 +57,12 @@ function Footer(){
             <button>Sign up for our email</button>
             <button>Support Us</button>
             <div className='links'>
-                <footerLinkBox name="World" links={world}/>
-                <footerLinkBox name="News" links={news} />
-                <footerLinkBox name="Media" links={media} />
-                <footerLinkBox name="Social" links={social} />
-                <footerLinkBox name="Company" links={company} />
-                <footerLinkBox name="Legal" links={legal} />
+                <FooterLinkBox name="World" links={world}/>
+                <FooterLinkBox name="News" links={news} />
+                <FooterLinkBox name="Media" links={media} />
+                <FooterLinkBox name="Social" links={social} />
+                <FooterLinkBox name="Company" links={company} />
+                <FooterLinkBox name="Legal" links={legal} />
             </div>
         </footer>
     )
