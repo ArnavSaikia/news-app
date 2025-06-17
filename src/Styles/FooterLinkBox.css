@@ -1,8 +1,14 @@
-.footer-link-box ul{
-    display: none;
-    transition: display 0.5s ease-in-out;
+.footer-link-box span{
+    color: white;
+    margin-bottom: 0.5em;
 }
 
-.active{
-    display: block;
+
+.footer-link-box ul{
+    display: none;
+    list-style: none;
+    transition: display 0.5s ease-in-out;
+    color: #BCBCBC;
+    margin-bottom: 1em;
 }
+
