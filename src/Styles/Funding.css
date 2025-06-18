@@ -51,10 +51,11 @@
 
 @media (min-width: 768px){
     .funding-box{
-        height: 15vh;
+        min-height: 15vh;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
+        padding: 1rem 0;
     }
 
     .funding-box div{
@@ -87,5 +88,13 @@
 
     .funding-box button{
         border-radius: 0.4em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .funding-box{
+        /* min-height: 20vh; */
+        justify-content: space-around;
+        padding: 1rem 0;
     }
 }

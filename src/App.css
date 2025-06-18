@@ -5,6 +5,7 @@
 
 body{
     font-family: 'Neue Montreal', Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 /* Neue Montreal Font Faces */
