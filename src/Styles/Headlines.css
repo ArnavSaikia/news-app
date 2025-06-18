@@ -16,3 +16,19 @@
     border: none;
     border-top: 1px solid #D8D8D8;
 }
+
+@media (min-width: 768px) {
+    .headlines-box{
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 5vw;
+        gap: 1rem;
+    }
+    
+    .headlines-box > span {
+        display: block;
+        margin: 0.8em 0 0 0;
+        flex-basis: 100%;
+    }
+
+}

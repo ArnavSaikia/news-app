@@ -23,3 +23,9 @@
     font-size: 1.0rem;
     color: #202123;
 }
+
+@media (min-width: 768px) {
+    .article-box{
+        max-width: 48.8%;
+    }
+}
