@@ -7,6 +7,13 @@
     align-items: center;
     padding: 0 0.3em;
     border-bottom: 3px solid #D8D8D8;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+    color: #202132;
+}
+
+.navbar2::-webkit-scrollbar{
+    display: none;
 }
 
 .navbar2 div{
@@ -18,5 +25,13 @@
 
 .navbar2 .vertical-line{
     height: 1em;
-    border-left: 1px solid;
+    border-left: 1px solid #D8D8D8;
+}
+
+@media (min-width: 1280px) {
+    .navbar2{
+        padding: 0.5rem 0.3em;
+        font-size: 0.8rem;
+        justify-content: center;
+    }
 }
