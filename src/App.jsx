@@ -15,15 +15,17 @@ function App() {
       <Navbar/>
       <Funding/>
       <Navbar2/>
-      <Headlines/>
-      <Category name="United States"/>
-      <Category name="World"/>
-      <Category name="Sport"/>
-      <Category name="Business"/>
-      <Category name="Entertainment"/>
-      <Category name="Science"/>
-      <Category name="Travel"/>
-      <Category name="Food"/>
+      <div className='main-body'>
+        <Headlines/>
+        <Category name="United States"/>
+        <Category name="World"/>
+        <Category name="Sport"/>
+        <Category name="Business"/>
+        <Category name="Entertainment"/>
+        <Category name="Science"/>
+        <Category name="Travel"/>
+        <Category name="Food"/>
+      </div>
       <Footer/>
     </>
   )
