@@ -5,8 +5,8 @@ function Headlines(){
     return(
         <div className="headlines-box">
             <span>Headlines</span>
-            <Article/>
-            <Article/>
+            <Article className={null}/>
+            <Article className={null}/>
             <hr/>
         </div>
     )

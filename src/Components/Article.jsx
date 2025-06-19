@@ -3,9 +3,10 @@ import '../Styles/Article.css';
 
 function Article(props){
     const imgSource = props.src || placeholderImage;
+    const specificClassSelector = props.className || '';
 
     return(
-        <div className='article-box'>
+        <div className={`article-box ${specificClassSelector}`}>
             <img src={imgSource}></img>
             <span className="article-cateogry">
                 World / Middle East

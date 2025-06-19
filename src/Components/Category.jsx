@@ -5,9 +5,9 @@ function Category(props){
     return (
         <div className="category-box">
             <span>{props.name}&nbsp;&nbsp;&gt; </span>
-            <Article/>
-            <Article/>
-            <Article/>
+            <Article className='category'/>
+            <Article className='category'/>
+            <Article className='category'/>
             <hr/>
         </div>
     )

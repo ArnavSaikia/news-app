@@ -73,6 +73,8 @@ nav{
     object-fit: contain;
 }
 
-.main-body{
+@media(min-width:1280px){
+    .main-body{
     padding: 0 21.475vw;
+}
 }
