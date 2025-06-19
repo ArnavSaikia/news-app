@@ -29,3 +29,13 @@
         max-width: 48.8%;
     }
 }
+
+@media (min-width: 1280px) {
+    .article-box{
+        max-width: 40%;
+    }
+
+    .article-box img{
+        aspect-ratio: 3/2;
+    }
+}
