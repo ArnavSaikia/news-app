@@ -28,3 +28,17 @@
     margin-bottom: 1em;
 }
 
+@media(min-width: 1280px){
+    .footer-link-box ul{
+        display: block;
+    }
+
+    .footer-link-box{
+        border-top: none;
+    }
+
+    .footer-link-box span img{
+        display: none;
+    }
+}
+

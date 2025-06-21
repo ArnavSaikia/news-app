@@ -49,13 +49,16 @@ function Footer(){
 
     return(
         <footer>
-            <img src={guardianLogo}></img>
-            <span>
-                Original reporting and incisive analysis,<br/>
-                direct from the Guardian every morning.
-            </span>
-            <button>Sign up for our email</button>
-            <button>Support Us</button>
+            <div>
+                <img src={guardianLogo}></img>
+                <span>
+                    Original reporting and incisive analysis,<br/>
+                    direct from the Guardian every morning.
+                </span>
+                <button>Sign up for our email</button>
+                <button>Support Us</button>
+            </div>
+            
             <div className='links'>
                 <FooterLinkBox name="World" links={world}/>
                 <FooterLinkBox name="News" links={news} />
