@@ -30,11 +30,12 @@
 
 @media(min-width: 1280px){
     .footer-link-box ul{
-        display: block;
+        display: inline-block;
     }
 
     .footer-link-box{
         border-top: none;
+        flex: 0 0 auto; /* Don't grow or shrink, size to content */
     }
 
     .footer-link-box span img{

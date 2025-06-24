@@ -98,3 +98,11 @@
         padding: 1rem 0;
     }
 }
+
+@media (min-width: 1280px) {
+    .funding-box{
+        /* min-height: 20vh; */
+        justify-content: space-between;
+        padding: 1rem 18%;
+    }
+}

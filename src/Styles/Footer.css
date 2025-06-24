@@ -54,10 +54,21 @@ footer button:nth-of-type(2) {
 @media(min-width: 1280px){
     footer{
         padding: 0 18%;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1rem;
     }
 
     .links{
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        flex: 1 1 auto;
+        justify-content: space-between;
+    }
+
+    .copyright-section{
+        flex: 1 1 auto;
     }
 }

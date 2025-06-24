@@ -32,7 +32,7 @@
 
 @media (min-width: 1280px) {
     .article-box{
-        /* max-width: 50%; */
+        max-width: 49%;
     }
 
     .article-box img{
