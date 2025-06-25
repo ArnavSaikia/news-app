@@ -19,14 +19,14 @@ function App() {
       <Navbar2/>
       <div className='main-body'>
         <Headlines/>
-        <Category name="United States"/>
-        <Category name="World"/>
-        <Category name="Sport"/>
-        <Category name="Business"/>
-        <Category name="Entertainment"/>
-        <Category name="Science"/>
-        <Category name="Travel"/>
-        <Category name="Food"/>
+        <Category name="United States" sectionId="us-news"/>
+        <Category name="World" sectionId="world"/>
+        <Category name="Sport" sectionId="sport"/>
+        <Category name="Business" sectionId="business"/>
+        <Category name="Entertainment" sectionId="music"/>
+        <Category name="Science" sectionId="science"/>
+        <Category name="Travel" sectionId="travel"/>
+        <Category name="Food" sectionId="food"/>
       </div>
       <Footer/>
     </>
