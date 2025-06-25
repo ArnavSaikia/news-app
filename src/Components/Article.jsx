@@ -3,16 +3,18 @@ import '../Styles/Article.css';
 
 function Article(props){
     const imgSource = props.src || placeholderImage;
+    const headline = props.headline || "Israel launches first ground offensive since end of Gaza ceasefire, partially recapturing key area";
+    const category = props.category || "World / Middle East";
     const specificClassSelector = props.className || '';
 
     return(
         <div className={`article-box ${specificClassSelector}`}>
             <img src={imgSource}></img>
             <span className="article-cateogry">
-                World / Middle East
+                {category}
             </span>
             <span className="article-description">
-                Israel launches first ground offensive since end of Gaza ceasefire, partially recapturing key area
+                {headline}
             </span>
         </div>
     )
