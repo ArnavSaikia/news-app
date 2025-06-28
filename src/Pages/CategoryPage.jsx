@@ -14,7 +14,7 @@ function CategoryPage(){
     const [articles , setArticles] = useState([]);
 
     useEffect(() => {
-        const url = `https://content.guardianapis.com/search?section=${id}&api-key=a63faffd-11ac-4dd3-a568-efe280531529&show-fields=headline,trailText,thumbnail&page-size=12`;
+        const url = `https://content.guardianapis.com/search?section=${id}&api-key=a63faffd-11ac-4dd3-a568-efe280531529&show-fields=headline,trailText,thumbnail&page-size=21`;
         console.log(url);
         fetch(url)
         .then(response => response.json())
@@ -38,7 +38,7 @@ function CategoryPage(){
             <Navbar/>
             <Funding/>
             <Navbar2/>
-            <div className='main-body'> 
+            <div className='main-body section-body'> 
                 {articles.response.results.map((result, idx) => (
                     <Article
                         key={result.id || idx}
