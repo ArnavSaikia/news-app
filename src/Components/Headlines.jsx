@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Article from "./Article.jsx";
 import '../Styles/Headlines.css';
+import { Link } from "react-router-dom";
 
 function Headlines(){
     const [headlines, setHeadlines] = useState([]);
@@ -24,12 +25,24 @@ function Headlines(){
     )
 
     return(
-        <div className="headlines-box">
-            <span>Headlines</span>
-            <Article className={null} src={headlines.response.results[0].fields.thumbnail} category={headlines.response.results[0].sectionName} headline={headlines.response.results[0].fields.headline}/>
-            <Article className={null} src={headlines.response.results[1].fields.thumbnail} category={headlines.response.results[1].sectionName} headline={headlines.response.results[1].fields.headline}/>
-            <hr/>
-        </div>
+        <>
+            <div className="headlines-box">
+                <span>Headlines</span>
+                    <Article
+                        className={null}
+                        src={headlines.response.results[0].fields.thumbnail}
+                        category={headlines.response.results[0].sectionName}
+                        headline={headlines.response.results[0].fields.headline}
+                    />
+                    <Article
+                        className={null}
+                        src={headlines.response.results[1].fields.thumbnail}
+                        category={headlines.response.results[1].sectionName}
+                        headline={headlines.response.results[1].fields.headline}
+                    />
+                <hr/>
+            </div>
+        </>
     )
 }
 
