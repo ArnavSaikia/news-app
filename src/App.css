@@ -73,6 +73,23 @@ nav{
     object-fit: contain;
 }
 
+.section-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.5rem;
+}
+
+@media(min-width: 768px){
+    .section-body{
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 1rem 5vw;
+        gap: 0.5rem;
+
+    }
+}
+
 @media(min-width:1280px){
     .main-body{
     /* padding: 0 21.475vw; */
