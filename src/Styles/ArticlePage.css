@@ -1,0 +1,28 @@
+.article-body{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 5%;
+}
+
+.article-category{
+    color: #DA381F;
+    font-size: 0.85rem;
+    margin-bottom: 0.5em;
+}
+
+.article-headline{
+    font-size: 1.5rem;
+    color: #202123;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.article-trailtext{
+    color: #5f5f5f;
+    margin-bottom: 1em;
+}
+
+.article-publication-date{
+    color: #202123;
+    padding: 0.5em 0;
+}

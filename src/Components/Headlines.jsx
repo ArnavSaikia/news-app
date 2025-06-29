@@ -28,18 +28,23 @@ function Headlines(){
         <>
             <div className="headlines-box">
                 <span>Headlines</span>
-                    <Article
+                    <Link to='/article/1' style={{display: 'contents'}}>
+                        <Article
                         className={null}
                         src={headlines.response.results[0].fields.thumbnail}
                         category={headlines.response.results[0].sectionName}
                         headline={headlines.response.results[0].fields.headline}
                     />
-                    <Article
-                        className={null}
-                        src={headlines.response.results[1].fields.thumbnail}
-                        category={headlines.response.results[1].sectionName}
-                        headline={headlines.response.results[1].fields.headline}
-                    />
+                    </Link>
+                    
+                    <Link to='/article/1' style={{display: 'contents'}}>
+                        <Article
+                            className={null}
+                            src={headlines.response.results[1].fields.thumbnail}
+                            category={headlines.response.results[1].sectionName}
+                            headline={headlines.response.results[1].fields.headline}
+                        />
+                    </Link>
                 <hr/>
             </div>
         </>
