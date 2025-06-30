@@ -6,6 +6,7 @@ import Navbar2 from "../Components/Navbar2.jsx";
 import Footer from "../Components/Footer.jsx";
 import placeHolderImage from '../assets/news_placeholder.png';
 import '../Styles/ArticlePage.css';
+import Article from "../Components/Article.jsx";
 
 function ArticlePage(){
     const {articleId} = useParams();
@@ -39,6 +40,13 @@ function ArticlePage(){
                 <p className="article-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, nec dictum nisi nisl eget sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Mauris euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, nec dictum nisi nisl eget sapien.
                 </p>
+                <hr/>
+            </div>
+            <div className="related-stories-box">
+                <Article/>
+                <Article/>
+                <Article/>
+                <Article/>
             </div>
             <Footer/>
         </>
