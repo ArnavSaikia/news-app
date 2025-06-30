@@ -8,6 +8,7 @@ import Category from '../Components/Category.jsx';
 import Footer from '../Components/Footer.jsx';
 import Article from '../Components/Article.jsx';
 import { useParams } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function CategoryPage(){
     const {id} = useParams();
@@ -19,7 +20,7 @@ function CategoryPage(){
         fetch(url)
         .then(response => response.json())
         .then(jsonResponse => setArticles(jsonResponse));
-    },[]);
+    },[id]);
 
     if(!articles || !articles.response) return(
         <>
@@ -40,13 +41,18 @@ function CategoryPage(){
             <Navbar2/>
             <div className='main-body section-body'> 
                 {articles.response.results.map((result, idx) => (
-                    <Article
+                    <Link
                         key={result.id || idx}
-                        className='category'
-                        src={result.fields?.thumbnail}
-                        category={result.sectionName}
-                        headline={result.fields?.headline}
-                    />
+                        to={`/article/${encodeURIComponent(result.id)}`}
+                        style={{ display: 'contents' }}
+                    >
+                        <Article
+                            className='category'
+                            src={result.fields?.thumbnail}
+                            category={result.sectionName}
+                            headline={result.fields?.headline}
+                        />
+                    </Link>
                 ))}
             </div>
             <Footer/>

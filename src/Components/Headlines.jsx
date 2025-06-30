@@ -28,7 +28,7 @@ function Headlines(){
         <>
             <div className="headlines-box">
                 <span>Headlines</span>
-                    <Link to='/article/1' style={{display: 'contents'}}>
+                    <Link to={`/article/${encodeURIComponent(headlines.response.results[0].id)}`} style={{display: 'contents'}}>
                         <Article
                         className={null}
                         src={headlines.response.results[0].fields.thumbnail}
@@ -37,7 +37,7 @@ function Headlines(){
                     />
                     </Link>
                     
-                    <Link to='/article/1' style={{display: 'contents'}}>
+                    <Link to={`/article/${encodeURIComponent(headlines.response.results[1].id)}`} style={{display: 'contents'}}>
                         <Article
                             className={null}
                             src={headlines.response.results[1].fields.thumbnail}

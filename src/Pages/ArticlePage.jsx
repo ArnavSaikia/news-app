@@ -7,12 +7,43 @@ import Footer from "../Components/Footer.jsx";
 import placeHolderImage from '../assets/news_placeholder.png';
 import '../Styles/ArticlePage.css';
 import Article from "../Components/Article.jsx";
+import { Link } from "react-router-dom";
 
 function ArticlePage(){
     const {articleId} = useParams();
-    const [articleObject , setArticleObject] = useState(1);
+    const uriDecodedId = decodeURIComponent(articleId);
+    const [articleObject , setArticleObject] = useState(null);
+    const [topStories, setTopStories] = useState(null);
+    const [relatedStories, setRelatedStories] = useState(null);
 
-    if(!articleObject) return(
+    useEffect(() => {
+        const url = `https://content.guardianapis.com/${uriDecodedId}?show-fields=headline,body,thumbnail,main,byline,trailText&api-key=a63faffd-11ac-4dd3-a568-efe280531529`;
+
+        fetch(url)
+        .then(received => received.json())
+        .then(data => {
+            setArticleObject(data.response.content);
+            return data.response.content.sectionId;
+        })
+        .then((section) => {
+            return fetch(`https://content.guardianapis.com/search?section=${section}&order-by=newest&show-fields=headline,trailText,thumbnail&page-size=12&api-key=a63faffd-11ac-4dd3-a568-efe280531529`);
+        })
+        .then(results => results.json())
+        .then(data => setRelatedStories(data))
+        .then(console.log(relatedStories))
+        .catch(err => console.log(err));
+    },[uriDecodedId]);
+
+    useEffect(() => {
+        const url = `https://content.guardianapis.com/search?order-by=newest&show-fields=headline,trailText,thumbnail&page-size=12&api-key=a63faffd-11ac-4dd3-a568-efe280531529`;
+        
+        fetch(url)
+        .then(received => received.json())
+        .then(data => setTopStories(data))
+        .catch(err => console.log(err));
+    },[uriDecodedId]);
+
+    if(!articleObject || !topStories || !relatedStories) return(
         <>
             <Navbar/>
             <Funding/>
@@ -24,40 +55,83 @@ function ArticlePage(){
         </>
     )
 
-    return(
-        <>
-            <Navbar/>
-            <Funding/>
-            <Navbar2/>
-            <div className="article-body">
-                <span className="article-category">Business / Google</span>
-                <span className="article-headline">Google agrees to pay $28 million to settle claims it favored white and Asian workers</span>
-                <span className="article-trailtext">Class action lawsuit alleged company discriminated against minority background staff on pay and career oportunities</span>
-                <hr/>
-                <span className="article-publication-date">Wed 19 Mar 2025</span>
-                <hr/>
-                <img src={placeHolderImage}/>
-                <p className="article-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, nec dictum nisi nisl eget sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Mauris euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, nec dictum nisi nisl eget sapien.
-                </p>
-                <hr/>
-            </div>
-            <div className="related-stories-box">
-                <span>Related Stories&nbsp;&nbsp;&gt; </span>
-                <Article className="related-stories-article"/>
-                <Article className="related-stories-article"/>
-                <Article className="related-stories-article"/>
-                <Article className="related-stories-article"/>
-            </div>
-            <div className="top-stories-box">
-                <hr/>
-                <span>Top Stories&nbsp;&nbsp;&gt; </span>
-                <Article className="top-stories-article"/>
-                <Article className="top-stories-article"/>
-            </div>
-            <Footer/>
-        </>
-    )
+    else{
+        const headline = articleObject.fields.headline;
+        const category= articleObject.sectionName;
+        const trailText = articleObject.fields.trailText;
+
+        let timeOptions = {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric',
+            hour: 'numeric',
+            minute: '2-digit',
+            hour12: false,
+            timeZone: 'Asia/Kolkata',
+            timeZoneName: 'short'
+        };
+        const publicationDate = new Date(articleObject.webPublicationDate).toLocaleString('en-GB',timeOptions);
+        const image = articleObject.fields.thumbnail;
+        const bodyText = articleObject.fields.body;
+
+        return(
+            <>
+                <Navbar/>
+                <Funding/>
+                <Navbar2/>
+                <div className="article-body">
+                    <span className="article-category">{category}</span>
+                    <span className="article-headline">{headline}</span>
+                    <span className="article-trailtext">{trailText}</span>
+                    <hr/>
+                    <span className="article-publication-date">{publicationDate}</span>
+                    <hr/>
+                    <img src={image||placeHolderImage}/>
+                    <p className="article-text"
+                        dangerouslySetInnerHTML={{ __html: bodyText }}
+                    >
+                    </p>
+                    <hr/>
+                </div>
+                <div className="related-stories-box">
+                    <span className="heading">Related Stories&nbsp;&nbsp;&gt; </span>
+                    {relatedStories.response && relatedStories.response.results.slice(0,4).map((story, idx) => (
+                        <Link
+                            key={story.id || idx}
+                            to={`/article/${encodeURIComponent(story.id)}`}
+                            style={{ display: 'contents' }}
+                        >
+                            <Article
+                                className="related-stories-article"
+                                src={story.fields?.thumbnail}
+                                category={story.sectionName}
+                                headline={story.fields?.headline}
+                            />
+                        </Link>
+                    ))}
+                </div>
+                <div className="top-stories-box">
+                    <hr/>
+                    <span className="heading">Top Stories&nbsp;&nbsp;&gt; </span>
+                    {topStories.response && topStories.response.results.slice(0,2).map((story, idx) => (
+                        <Link
+                            key={story.id || idx}
+                            to={`/article/${encodeURIComponent(story.id)}`}
+                            style={{ display: 'contents' }}
+                        >
+                            <Article
+                                className="top-stories-article"
+                                src={story.fields?.thumbnail}
+                                category={story.sectionName}
+                                headline={story.fields?.headline}
+                            />
+                        </Link>
+                    ))}
+                </div>
+                <Footer/>
+            </>
+        )
+    }
 }
 
 export default ArticlePage;

@@ -1,6 +1,7 @@
 import {useState , useEffect} from 'react';
 import Article from "./Article.jsx";
 import '../Styles/Category.css'
+import { Link } from "react-router-dom";
 
 function Category(props){
     const [articles,setArticles] = useState({});
@@ -25,14 +26,33 @@ function Category(props){
     return (
         <div className="category-box">
             <span>{props.name}&nbsp;&nbsp;&gt; </span>
-            <Article className='category' src={articles.response.results[2].fields.thumbnail} category={articles.response.results[2].sectionName} headline={articles.response.results[2].fields.headline}/>
-            <Article className='category' src={articles.response.results[3].fields.thumbnail} category={articles.response.results[3].sectionName} headline={articles.response.results[3].fields.headline}/>
-            <Article className='category' src={articles.response.results[4].fields.thumbnail} category={articles.response.results[4].sectionName} headline={articles.response.results[4].fields.headline}/>
+            <Link to={`/article/${encodeURIComponent(articles.response.results[2].id)}`} style={{display: 'contents'}}>
+                <Article
+                    className='category'
+                    src={articles.response.results[2].fields.thumbnail}
+                    category={articles.response.results[2].sectionName}
+                    headline={articles.response.results[2].fields.headline}
+                />
+            </Link>
+            <Link to={`/article/${encodeURIComponent(articles.response.results[3].id)}`} style={{display: 'contents'}}>
+                <Article
+                    className='category'
+                    src={articles.response.results[3].fields.thumbnail}
+                    category={articles.response.results[3].sectionName}
+                    headline={articles.response.results[3].fields.headline}
+                />
+            </Link>
+            <Link to={`/article/${encodeURIComponent(articles.response.results[4].id)}`} style={{display: 'contents'}}>
+                <Article
+                    className='category'
+                    src={articles.response.results[4].fields.thumbnail}
+                    category={articles.response.results[4].sectionName}
+                    headline={articles.response.results[4].fields.headline}
+                />
+            </Link>
             <hr/>
         </div>
     )
-
-    
 }
 
 export default Category;
