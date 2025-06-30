@@ -44,10 +44,16 @@ function ArticlePage(){
             </div>
             <div className="related-stories-box">
                 <span>Related Stories&nbsp;&nbsp;&gt; </span>
-                <Article/>
-                <Article/>
-                <Article/>
-                <Article/>
+                <Article className="related-stories-article"/>
+                <Article className="related-stories-article"/>
+                <Article className="related-stories-article"/>
+                <Article className="related-stories-article"/>
+            </div>
+            <div className="top-stories-box">
+                <hr/>
+                <span>Top Stories&nbsp;&nbsp;&gt; </span>
+                <Article className="top-stories-article"/>
+                <Article className="top-stories-article"/>
             </div>
             <Footer/>
         </>
