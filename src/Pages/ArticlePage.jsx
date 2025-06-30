@@ -43,6 +43,7 @@ function ArticlePage(){
                 <hr/>
             </div>
             <div className="related-stories-box">
+                <span>Related Stories&nbsp;&nbsp;&gt; </span>
                 <Article/>
                 <Article/>
                 <Article/>
