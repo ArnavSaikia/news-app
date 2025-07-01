@@ -16,6 +16,16 @@ function ArticlePage(){
     const [topStories, setTopStories] = useState(null);
     const [relatedStories, setRelatedStories] = useState(null);
 
+    function transformInteractiveFigures(html) {
+        return html.replace(
+            /<figure[^>]*class="[^"]*element-interactive[^"]*"[^>]*data-canonical-url="([^"]+)"[^>]*>(.*?)<\/figure>/g,
+            (_, url) => {
+            return `<iframe src="${url}" width="fit-content" height="fit-content" frameborder="0" style="border: none; overflow-y: auto;" scrolling="yes" allowfullscreen></iframe>`;
+            }
+        );
+    }
+
+
     useEffect(() => {
         const url = `https://content.guardianapis.com/${uriDecodedId}?show-fields=headline,body,thumbnail,main,byline,trailText&api-key=a63faffd-11ac-4dd3-a568-efe280531529`;
 
@@ -72,7 +82,7 @@ function ArticlePage(){
         };
         const publicationDate = new Date(articleObject.webPublicationDate).toLocaleString('en-GB',timeOptions);
         const image = articleObject.fields.thumbnail;
-        const bodyText = articleObject.fields.body;
+        const bodyText = transformInteractiveFigures(articleObject.fields.body);
 
         return(
             <>
