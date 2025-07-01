@@ -1,0 +1,21 @@
+.search-widget{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.search-widget input{
+    height: 60%;
+    background-color: #444444;
+    color: #7b7a7a;
+    border: none;
+    border-radius: 5%;
+    padding-left: 0.5rem;
+}
+
+.search-widget input:focus{
+    border: none;
+    outline: none;
+    color: white;
+}
