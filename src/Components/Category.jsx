@@ -7,7 +7,7 @@ function Category(props){
     const [articles,setArticles] = useState({});
 
     useEffect(() => {
-        const url = `https://content.guardianapis.com/search?section=${props.sectionId}&api-key=a63faffd-11ac-4dd3-a568-efe280531529&show-fields=headline,trailText,thumbnail`;
+        const url = `https://content.guardianapis.com/search?section=${decodeURIComponent(props.sectionId)}&api-key=a63faffd-11ac-4dd3-a568-efe280531529&show-fields=headline,trailText,thumbnail`;
         fetch(url)
         .then(received => received.json())
         .then(data => setArticles(data));
