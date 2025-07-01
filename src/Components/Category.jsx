@@ -25,7 +25,11 @@ function Category(props){
 
     return (
         <div className="category-box">
-            <span>{props.name}&nbsp;&nbsp;&gt; </span>
+            <span>
+                <Link to={`/category/${props.sectionId}`} style={{display: 'contents', color: '#202123'}}>
+                    {props.name}&nbsp;&nbsp;&gt;
+                </Link>
+            </span>
             <Link to={`/article/${encodeURIComponent(articles.response.results[2].id)}`} style={{display: 'contents'}}>
                 <Article
                     className='category'
