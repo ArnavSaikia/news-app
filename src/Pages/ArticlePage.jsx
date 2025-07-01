@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 function ArticlePage(){
     const {articleId} = useParams();
     const uriDecodedId = decodeURIComponent(articleId);
+    console.log("URI decoded:", uriDecodedId);
     const [articleObject , setArticleObject] = useState(null);
     const [topStories, setTopStories] = useState(null);
     const [relatedStories, setRelatedStories] = useState(null);
@@ -24,6 +25,17 @@ function ArticlePage(){
             }
         );
     }
+
+    function rewriteGuardianLinks(html) {
+        return html.replace(
+            /<a\s+[^>]*href="https:\/\/www\.theguardian\.com\/([^"]+)"[^>]*>(.*?)<\/a>/gi,
+            (_match, path, text) => {
+            const localPath = `/news-app/article/${encodeURIComponent(path)}`;
+            return `<a href="${localPath}">${text}</a>`;
+            }
+        );
+    }
+
 
 
     useEffect(() => {
@@ -82,7 +94,7 @@ function ArticlePage(){
         };
         const publicationDate = new Date(articleObject.webPublicationDate).toLocaleString('en-GB',timeOptions);
         const image = articleObject.fields.thumbnail;
-        const bodyText = transformInteractiveFigures(articleObject.fields.body);
+        const bodyText = rewriteGuardianLinks(transformInteractiveFigures(articleObject.fields.body));
 
         return(
             <>
