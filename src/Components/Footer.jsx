@@ -73,8 +73,8 @@ function Footer(){
                     Original reporting and incisive analysis,<br/>
                     direct from the Guardian every morning.
                 </span>
-                <button>Sign up for our email</button>
-                <button>Support Us</button>
+                <button><a href="https://www.theguardian.com/email-newsletters" target="_blank" rel="noopener noreferrer">Sign up for our email</a></button>
+                <button><a href="https://support.theguardian.com/contribute" target="_blank" rel="noopener noreferrer">Support Us</a></button>
             </div>
             
             <div className='links'>

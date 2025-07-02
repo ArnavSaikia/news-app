@@ -7,7 +7,7 @@ function Funding(){
             <div>
                 <span>Support The Guardian</span>
                 <span>Fund independent journalism with $5 per month</span>
-                <button>Support Us</button>
+                <button><a href="https://support.theguardian.com/contribute" target="_blank" rel="noopener noreferrer">Support Us</a></button>
             </div>
             <img src={guardianLogo}></img>
         </div>

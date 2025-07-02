@@ -27,6 +27,11 @@ footer button:first-of-type {
     font-size: 1.1rem;
     display: block;
     margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+footer button:first-of-type a{
+    all: unset;
 }
 
 footer button:nth-of-type(2) {
@@ -38,6 +43,11 @@ footer button:nth-of-type(2) {
     font-weight: bold;
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+footer button:nth-of-type(2) a{
+    all: unset;
 }
 
 .links{

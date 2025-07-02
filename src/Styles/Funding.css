@@ -42,10 +42,15 @@
     color: #faf7f7;
     border-radius: 0.7em;
     font-size: 0.8em;
+    cursor: pointer;
 }
 
 .funding-box img{
     display: none;
+}
+
+.funding-box a{
+    all:unset;
 }
 
 
