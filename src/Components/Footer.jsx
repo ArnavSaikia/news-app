@@ -1,50 +1,68 @@
 import guardianLogo from '../assets/guardianlogo_white.png';
 import FooterLinkBox from './FooterLinkBox';
 import '../Styles/Footer.css';
+import { Link } from 'react-router-dom';
 
 function Footer(){
-    const world = ["Africa", "Americas", "Asia", "Australia", "China", "Europe", "India", "Middle East", "United Kingdom", "United States"];
+    const world = [
+        ["Africa", "world/africa"],
+        ["Americas", "world/americas"],
+        ["Asia", "world/asia"],
+        ["Australia", "world/australia-news"],
+        ["China", "world/china"],
+        ["Europe", "world/europe-news"],
+        ["India", "world/india"],
+        ["Middle East", "world/middleeast"],
+        ["United Kingdom", "world/uk-news"],
+        ["United States", "world/us-news"]
+    ];
     const news = [
-        "Politics",
-        "Business",
-        "Education",
-        "Sport",
-        "Tech",
-        "Science",
-        "Weather",
-        "Culture",
-        "Lifestyle",
-        "Opinion",
-        "Climate Crisis",
-        "Environment",
-        "Global Development",
-        "More"
+        ["Politics", "politics"],
+        ["Business", "business"],
+        ["Education", "education"],
+        ["Sport", "sport"],
+        ["Tech", "technology"],
+        ["Science", "science"],
+        ["Weather", "weather"],
+        ["Culture", "culture"],
+        ["Lifestyle", "lifeandstyle"],
+        ["Opinion", "commentisfree"],
+        ["Climate Crisis", "environment/climate-crisis"],
+        ["Environment", "environment"],
+        ["Global Development", "global-development"],
+        ["More", "more"]
     ]
     const media = [
-        "Pictures",
-        "Videos",
-        "Podcasts"
+        ["Pictures", "https://www.theguardian.com/inpictures"],
+        ["Videos", "https://www.theguardian.com/video"],
+        ["Podcasts", "https://www.theguardian.com/podcasts"]
     ]
 
-    const social = ["Facebook", "Instagram", "YouTube", "LinkedIn", "Newsletters"]
+    const social = [
+        ["Facebook", "https://www.facebook.com/theguardian"],
+        ["Instagram", "https://www.instagram.com/guardian"],
+        ["YouTube", "https://www.youtube.com/user/TheGuardian"],
+        ["LinkedIn", "https://www.linkedin.com/company/the-guardian"],
+        ["Newsletters", "https://www.theguardian.com/email-newsletters"]
+    ];
 
     const company = [
-        "About Us",
-        "Help",
-        "Complaints & Corrections",
-        "SecureDrop",
-        "Work For Us",
-        "Contact Us",
-        "Tax Strategy",
-        "Advertise with Us",
-        "Guardian Labs",
-        "Search Jobs"
+        ["About Us", "https://www.theguardian.com/about"],
+        ["Help", "https://www.theguardian.com/help"],
+        ["Complaints & Corrections", "https://www.theguardian.com/info/complaints-and-corrections"],
+        ["SecureDrop", "https://www.theguardian.com/securedrop"],
+        ["Work For Us", "https://workforus.theguardian.com"],
+        ["Contact Us", "https://www.theguardian.com/help/contact-us"],
+        ["Tax Strategy", "https://www.theguardian.com/info/2017/nov/17/guardian-tax-strategy"],
+        ["Advertise with Us", "https://advertising.theguardian.com"],
+        ["Guardian Labs", "https://www.theguardian.com/guardianlabs"],
+        ["Search Jobs", "https://jobs.theguardian.com"]
     ];
 
     const legal = [
-        "Privacy Policy",
-        "Cookie Policy",
-        "Terms & Conditions"
+        ["Privacy Policy", "https://www.theguardian.com/help/privacy-policy"],
+        ["Cookie Policy", "https://www.theguardian.com/help/cookies"],
+        ["Terms & Conditions", "https://www.theguardian.com/help/terms-of-service"]
     ];
 
     return(

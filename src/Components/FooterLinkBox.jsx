@@ -1,10 +1,13 @@
 import '../Styles/FooterLinkBox.css';
 import downArrow from '../assets/icons8-sort-down-96.png';
+import { Link } from 'react-router-dom';
 
 function FooterLinkBox(props){
-    const linksList = props.links.map((name) => 
+    const linksList = props.links.map((arr) => 
         <li>
-            {name}
+            <Link to={`/category/${arr[1]}`}>
+                 {arr[0]}
+            </Link>
         </li>
     );
 
