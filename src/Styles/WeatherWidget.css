@@ -1,0 +1,24 @@
+.weather-widget{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: auto;
+    align-items: center;
+    color: #D8D8D8;
+    font-size: 0.85rem;
+    cursor: default;
+}
+
+.weather-widget img{
+    height: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.weather-widget span{
+    margin: 0 0.5rem;
+    color: #BCBCBC;
+}
+
+.location span{
+    margin: 0;
+}
