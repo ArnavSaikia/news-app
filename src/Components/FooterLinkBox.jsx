@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function FooterLinkBox(props){
     const linksList = props.links.map((arr) => 
         <li>
-            <Link to={`/category/${arr[1]}`}>
+            <Link to={`${arr[1]}`}>
                  {arr[0]}
             </Link>
         </li>

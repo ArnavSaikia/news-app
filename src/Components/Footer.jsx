@@ -5,32 +5,32 @@ import { Link } from 'react-router-dom';
 
 function Footer(){
     const world = [
-        ["Africa", "world/africa"],
-        ["Americas", "world/americas"],
-        ["Asia", "world/asia"],
-        ["Australia", "world/australia-news"],
-        ["China", "world/china"],
-        ["Europe", "world/europe-news"],
-        ["India", "world/india"],
-        ["Middle East", "world/middleeast"],
-        ["United Kingdom", "world/uk-news"],
-        ["United States", "world/us-news"]
+        ["Africa", "/search/" + encodeURIComponent("africa")],
+        ["Americas", "/search/" + encodeURIComponent("south america")],
+        ["Asia", "/search/" + encodeURIComponent("asia")],
+        ["Australia", "/search/" + encodeURIComponent("australia-news")],
+        ["China", "/search/" + encodeURIComponent("china")],
+        ["Europe", "/search/" + encodeURIComponent("europe-news")],
+        ["India", "/search/" + encodeURIComponent("india")],
+        ["Middle East", "/search/" + encodeURIComponent("middleeast")],
+        ["United Kingdom", "/search/" + encodeURIComponent("uk-news")],
+        ["United States", "/search/" + encodeURIComponent("us-news")]
     ];
     const news = [
-        ["Politics", "politics"],
-        ["Business", "business"],
-        ["Education", "education"],
-        ["Sport", "sport"],
-        ["Tech", "technology"],
-        ["Science", "science"],
-        ["Weather", "weather"],
-        ["Culture", "culture"],
-        ["Lifestyle", "lifeandstyle"],
-        ["Opinion", "commentisfree"],
-        ["Climate Crisis", "environment/climate-crisis"],
-        ["Environment", "environment"],
-        ["Global Development", "global-development"],
-        ["More", "more"]
+        ["Politics", "/category/" + encodeURIComponent("politics")],
+        ["Business", "/category/" + encodeURIComponent("business")],
+        ["Education", "/category/" + encodeURIComponent("education")],
+        ["Sport", "/category/" + encodeURIComponent("sport")],
+        ["Tech", "/category/" + encodeURIComponent("technology")],
+        ["Science", "/category/" + encodeURIComponent("science")],
+        ["Weather", "/category/" + encodeURIComponent("weather")],
+        ["Culture", "/category/" + encodeURIComponent("culture")],
+        ["Lifestyle", "/category/" + encodeURIComponent("lifeandstyle")],
+        ["Opinion", "/category/" + encodeURIComponent("commentisfree")],
+        ["Climate Crisis", "/category/" + encodeURIComponent("environment/climate-crisis")],
+        ["Environment", "/category/" + encodeURIComponent("environment")],
+        ["Global Development", "/category/" + encodeURIComponent("global-development")],
+        ["More", "/category/" + encodeURIComponent("more")]
     ]
     const media = [
         ["Pictures", "https://www.theguardian.com/inpictures"],

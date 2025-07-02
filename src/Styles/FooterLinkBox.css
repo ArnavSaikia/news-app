@@ -28,6 +28,12 @@
     margin-bottom: 1em;
 }
 
+.footer-link-box a{
+    all: unset;
+    color: rgb(188, 188, 188);
+    cursor: pointer;
+}
+
 @media(min-width: 1280px){
     .footer-link-box ul{
         display: inline-block;
