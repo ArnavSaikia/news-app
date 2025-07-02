@@ -181,7 +181,7 @@ hr{
 
 @media(min-width: 1280px){
     .article-body{
-        padding: 1rem 21.475%;
+        padding: 1rem 18%;
     }
 
     .article-category{
@@ -209,11 +209,11 @@ hr{
 
 
     .related-stories-box{
-        padding: 0 21.475%;
+        padding: 0 18%;
     }
 
     .top-stories-box{
-        padding: 0 21.475%;
+        padding: 0 18%;
     }
 
     
