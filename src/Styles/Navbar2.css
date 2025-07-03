@@ -21,6 +21,33 @@
     margin: 0 1em;
     color: #202132;
     font-weight: 410;
+    position: relative;
+    transition: all 0.1s ease-in-out;
+}
+
+.navbar2 div::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 0.1rem;
+    bottom: -5%;
+    left: 50%;
+    background-color:  #c1b2ff;
+    transform: translateX(-50%);
+    transition: all 0.1s ease-in-out;
+}
+
+.navbar2 div:hover{
+    color: 	#314a63;
+}
+
+.navbar2 div:active{
+    transform: scale(0.98) translate(0.5em);
+}
+
+.navbar2 div:hover::after{
+    width: 80%;
+    box-shadow: 0 0 0.2rem #c1b2ff;
 }
 
 .navbar2 .vertical-line{
