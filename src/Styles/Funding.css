@@ -43,6 +43,36 @@
     border-radius: 0.7em;
     font-size: 0.8em;
     cursor: pointer;
+    position: relative;
+}
+
+.funding-box button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: all 0.5s;
+}
+
+/* Hover state */
+.funding-box button:hover {
+    /* background: #041d4a; */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(5, 41, 98, 0.3);
+}
+
+/* Shimmer animation on hover */
+.funding-box button:hover::before {
+    width: 100%;
+}
+
+/* Active/pressed state */
+.funding-box button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(5, 41, 98, 0.2);
 }
 
 .funding-box img{
