@@ -17,24 +17,58 @@ footer span{
     margin-bottom: 1rem;
 }
 
-footer button:first-of-type {
+.email-button {
+    all: unset;
     color: #AFAFAE;
     background-color: #444545;
     border: none;
+    width: fit-content;
     border-radius: 0.5em;
-    padding: 0.5em 1em;
+    padding: 0.5em 1.25em;
     font-weight: bold;
     font-size: 1.1rem;
     display: block;
     margin-bottom: 0.5rem;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
-footer button:first-of-type a{
+.email-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: all 0.5s;
+}
+
+.email-button:hover {
+    background: #5a5b5c;
+    color: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(68, 69, 69, 0.18);
+}
+
+.email-button:hover::before {
+    width: 100%;
+}
+
+.email-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(5, 41, 98, 0.2);
+}
+
+
+
+/* footer button:first-of-type a{
     all: unset;
-}
+} */
 
-footer button:nth-of-type(2) {
+footer a:nth-of-type(2) {
+    all:unset;
     background-color: #2663FF;
     color: #f8f8f8;
     border: none;
@@ -44,11 +78,42 @@ footer button:nth-of-type(2) {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     cursor: pointer;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-footer button:nth-of-type(2) a{
-    all: unset;
+footer a:nth-of-type(2)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: all 0.5s;
 }
+
+footer a:nth-of-type(2):hover {
+    background: #041d4a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(5, 41, 98, 0.3);
+}
+
+footer a:nth-of-type(2):hover::before {
+    width: 100%;
+}
+
+footer a:nth-of-type(2):active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(5, 41, 98, 0.2);
+}
+
+/* footer button:nth-of-type(2) a{
+    all: unset;
+} */
 
 .links{
     display: flex;
