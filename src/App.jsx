@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Analytics } from "@vercel/analytics/next"
 import Landing from './Pages/Landing.jsx';
 import CategoryPage from './Pages/CategoryPage.jsx';
 import ArticlePage from './Pages/ArticlePage.jsx';
@@ -18,6 +19,7 @@ function App() {
         <Route path='/article/:articleId' element={<ArticlePage/>}/>
         <Route path='/search/:searchQuery' element={<SearchPage/>}></Route>
       </Routes>
+      <Analytics />
     </Router>
   )
 }

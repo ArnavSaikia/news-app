@@ -1,12 +1,51 @@
-# React + Vite
+## The Guardian Redesign
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+this is a personal project that reimagines The Guardian’s front-end experience and pulls live articles from The Guardian Open Platform. made it cuz i liked the guardian ui and i like to fuck around with cool UIs. the site routes articles completely within itself and is capable as a standalone news resource alternate to the guardian's official website. i've added extra links to the original website cuz the ui components were too pretty not to include. the site is made with a mobile first approach due to my long ignored need to learn responsive design :D
 
-Currently, two official plugins are available:
+### What it does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* pulls articles from the guardian's official api and provides live news
+* embeds the interactive elements like yt videos, charts and graphs for added QoL
+* routes completely within itself for every article (u dont have to link to the original website pages)
+* gives a fresh fully responsive look to the ui
+* provides u with a cute little weather widget and ur ip addr. if u check the logs
+* an easter egg? if u fuck around the navbar
+* its a fucking news website what else can it do?
 
-## Expanding the ESLint configuration
+### Live Link (not that u didnt see the description)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+https://the-guardian-redesign.vercel.app
+```
+
+### Stack
+
+* React + Vite (that's it)
+
+### Assets / APIs used
+
+* **UI reference** – [Behance: The Guardian redesign](https://www.behance.net/gallery/223488419/The-Guardian)  
+* **News** – [The Guardian **Open Platform** API](https://open-platform.theguardian.com/) 
+* **Geolocation** – [IP API](`https://ipapi.co/json/`) (free tier)  
+* **Weather** – [WeatherAPI](https://www.weatherapi.com/)
+
+### Setup
+
+```bash
+git clone https://github.com/ArnavSaikia/the-guardian-redesigned.git
+cd the-guardian-redesign
+npm install
+```
+
+### Notes / gotchas
+
+* free Guardian keys are limited to 5 k requests/day.  
+  if an article returns *“You are not permitted…”* it’s probably pay-walled.
+* IP API rate-limit is 50 k calls/month; weather + IP are cached to avoid hitting the limit.
+* any payment/support us options, newsletters and corporate links lead directly to the guardian's website not to me
+
+<br>
+
+---
+
+IDK Licenses -- do whatever?
