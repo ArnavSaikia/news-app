@@ -76,6 +76,15 @@ nav .search-widget,nav .weather-widget{
     height: 65%;
     width: auto;
     object-fit: contain;
+    transition: all 0.1s ease-in;
+}
+
+.logo:hover{
+    transform: translateY(-0.15rem);
+}
+
+.logo:active{
+    transform: scale(0.98);
 }
 
 .section-body{

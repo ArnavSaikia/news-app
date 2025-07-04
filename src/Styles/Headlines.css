@@ -11,6 +11,11 @@
     font-weight: 400;
 }
 
+.headlines-box > span:hover{
+    color: #17416b;
+    cursor: default;
+}
+
 .headlines-box hr{
     width: 90vw;
     border: none;
@@ -21,6 +26,7 @@
     .headlines-box{
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: flex-start;
         padding: 0 5vw;
         gap: 1rem;
     }

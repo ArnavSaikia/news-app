@@ -2,6 +2,20 @@
     width: 90vw;
     height: auto;
     margin-bottom: 2rem;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.article-box:hover{
+    /* transform: translateY(-0.5rem); */
+    transform: scale(1.01);
+}
+
+.article-box:hover .article-description{
+    color: #444545;
+}
+
+.article-box:active{
+    transform: scale(0.99);
 }
 
 .article-box img{

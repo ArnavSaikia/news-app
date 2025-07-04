@@ -9,6 +9,19 @@
     margin: 0.8em 0 0.8em 5vw;
     font-size: 1.3rem;
     font-weight: 400;
+    transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.category-box > span:hover{
+    transform: translateY(-5%);
+}
+
+.category-box > span:hover a{
+    color: #17416b !important;
+}
+
+.category-box > span:active{
+    transform: translatex(0.5rem);
 }
 
 .category-box hr{
@@ -22,6 +35,7 @@
         padding: 0 5vw;
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: flex-start;
         gap: 0.5em;
     }
 
