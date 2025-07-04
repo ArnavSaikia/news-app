@@ -9,6 +9,7 @@
     margin-bottom: 0.5em;
     display: flex;
     align-items: center;
+    cursor: default;
 }
 
 .footer-link-box span img{
@@ -26,12 +27,21 @@
     transition: all 0.5s ease-in-out;
     color: #BCBCBC;
     margin-bottom: 1em;
+    transition: all 0.1s;
 }
 
 .footer-link-box a{
     all: unset;
     color: rgb(188, 188, 188);
     cursor: pointer;
+}
+
+.footer-link-box li:active{
+    transform: scale(0.98);
+}
+
+.footer-link-box li:hover a{
+    color:white !important;
 }
 
 @media(min-width: 1280px){
