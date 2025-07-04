@@ -11,7 +11,7 @@
     background-color: #444444;
     color: #7b7a7a;
     border: none;
-    border-radius: 0.2rem;
+    border-radius: 0.5rem;
     padding-left: 0.5rem;
     border: 0.5px solid rgba(255, 255, 255, 0.088);
     cursor: pointer;
@@ -26,4 +26,10 @@
     border: none;
     outline: none;
     color: white;
+}
+
+@media(min-width: 768px){
+    .search-widget input{
+        border-radius: 0.2rem;
+    }
 }

@@ -102,7 +102,7 @@ function ArticlePage(){
                 <div className="article-body">
                     <span className="article-category">{category}</span>
                     <span className="article-headline">{headline}</span>
-                    <span className="article-trailtext">{trailText}</span>
+                    <span className="article-trailtext" dangerouslySetInnerHTML={{ __html: trailText }}></span>
                     <hr/>
                     <span className="article-publication-date">{publicationDate}</span>
                     <hr/>

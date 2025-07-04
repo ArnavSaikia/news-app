@@ -105,7 +105,7 @@ nav .search-widget{
         flex-wrap: wrap;
         padding: 1rem 5%;
         gap: 0.5rem;
-
+        align-items: flex-start;
     }
 
     nav{

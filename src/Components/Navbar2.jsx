@@ -20,7 +20,7 @@ function Navbar2(){
             <Link to={'/category/technology'}><div>Tech</div></Link>
             <Link to={'/category/business'}><div>Business</div></Link>
             <div className="vertical-line"></div>
-            <div>More</div>
+            <Link to={'/search/marijuana'}><div>More</div></Link>
         </div>
     )
 }
