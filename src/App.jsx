@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 import Landing from './Pages/Landing.jsx';
 import CategoryPage from './Pages/CategoryPage.jsx';
 import ArticlePage from './Pages/ArticlePage.jsx';
