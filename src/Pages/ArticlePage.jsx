@@ -12,7 +12,6 @@ import { Link } from "react-router-dom";
 function ArticlePage(){
     const {articleId} = useParams();
     const uriDecodedId = decodeURIComponent(articleId);
-    console.log("URI decoded:", uriDecodedId);
     const [articleObject , setArticleObject] = useState(null);
     const [topStories, setTopStories] = useState(null);
     const [relatedStories, setRelatedStories] = useState(null);
@@ -52,7 +51,6 @@ function ArticlePage(){
         })
         .then(results => results.json())
         .then(data => setRelatedStories(data))
-        .then(console.log(relatedStories))
         .catch(err => console.log(err));
     },[uriDecodedId]);
 

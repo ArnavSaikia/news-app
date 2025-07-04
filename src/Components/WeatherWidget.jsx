@@ -6,11 +6,27 @@ function WeatherWidget(){
     const [weatherData, setWeatherData] = useState(null);
 
     useEffect(() => {
+        const cachedIp = localStorage.getItem('ipLocation');
+        const cachedWeather = localStorage.getItem('weatherData');
+        const cachedTime = localStorage.getItem('weatherDataTimestamp');
+        const now = Date.now();
+
+        const isFresh = cachedTime && (now - parseInt(cachedTime) < 30 * 60 * 1000);
+
+        if (cachedIp && cachedWeather && isFresh) {
+            setIpLocation(JSON.parse(cachedIp));
+            setWeatherData(JSON.parse(cachedWeather));
+            return;
+        }
+
+
         const ipUrl = `https://ipapi.co/json/`;
+        console.log(ipUrl);
         fetch(ipUrl)
         .then(received => received.json())
         .then(data => {
             setIpLocation(data);
+            localStorage.setItem('ipLocation', JSON.stringify(data));
             return [data.latitude, data.longitude];
         })
         .then(coords => {
@@ -18,7 +34,11 @@ function WeatherWidget(){
             return fetch(weatherUrl);
         })
         .then(received => received.json())
-        .then(data => setWeatherData(data))
+        .then(data => {
+            setWeatherData(data);
+            localStorage.setItem('weatherData', JSON.stringify(data));
+            localStorage.setItem('weatherDataTimestamp', Date.now().toString());
+        })
         .catch(err => console.log(err));
     },[]);
 
