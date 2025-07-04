@@ -9,6 +9,10 @@
     cursor: default;
 }
 
+.weather-widget:hover{
+    transform: scale(1.02);
+}
+
 .weather-widget img{
     height: 1.5rem;
     margin-right: 0.5rem;

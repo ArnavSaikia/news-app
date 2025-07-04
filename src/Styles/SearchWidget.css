@@ -6,6 +6,7 @@
 }
 
 .search-widget input{
+    font-family: 'Neue Montreal', Arial, Helvetica, sans-serif;
     height: 60%;
     background-color: #444444;
     color: #7b7a7a;
