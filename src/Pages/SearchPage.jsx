@@ -15,7 +15,7 @@ function SearchPage(){
     const [searchResults, setSearchResults] = useState([]);
 
     useEffect(() => {
-        const url = `https://content.guardianapis.com/search?q=${uriDecodedQuery}&show-fields=headline,trailText,thumbnail&api-key=a63faffd-11ac-4dd3-a568-efe280531529&page-size=21`;
+        const url = `https://content.guardianapis.com/search?q=${uriDecodedQuery}&show-fields=headline,trailText,thumbnail&api-key=a63faffd-11ac-4dd3-a568-efe280531529&page-size=21&order-by=newest`;
         console.log(url);
         fetch(url)
         .then(received => received.json())

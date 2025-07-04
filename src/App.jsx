@@ -10,7 +10,7 @@ import ScrollToTop from './Components/ScrollToTopScript.jsx';
 function App() {
 
   return (
-    <Router basename='/news-app'>
+    <Router>
       <ScrollToTop/>
       <Routes>
         <Route path='/' element={<Landing/>}/>

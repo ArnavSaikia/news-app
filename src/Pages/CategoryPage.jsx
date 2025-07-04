@@ -15,7 +15,7 @@ function CategoryPage(){
     const [articles , setArticles] = useState([]);
 
     useEffect(() => {
-        const url = `https://content.guardianapis.com/search?section=${id}&api-key=a63faffd-11ac-4dd3-a568-efe280531529&show-fields=headline,trailText,thumbnail&page-size=21`;
+        const url = `https://content.guardianapis.com/search?section=${id}&api-key=a63faffd-11ac-4dd3-a568-efe280531529&show-fields=headline,trailText,thumbnail&page-size=21&order-by=newest`;
         console.log(url);
         fetch(url)
         .then(response => response.json())
